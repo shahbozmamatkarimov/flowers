@@ -53,7 +53,7 @@
             <ul class="pl-5 text-gray-500">
                 <li>
                     <input id="6" class="rounded-full mr-1" type="checkbox">
-                    <label for="6">Hammasi</label>
+                    <label for="6">All</label>
                 </li>
                 <li>
                     <input id="7" class="rounded-full mr-1" type="checkbox">
