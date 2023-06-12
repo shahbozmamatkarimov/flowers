@@ -104,7 +104,7 @@
                   eveniet.</p>
                 <div>
                   <button
-                    class="mt-4 border-2 w-28 border-red-600 rounded-lg px-2 py-1 text-sm text-[#E72463] cursor-pointer active:animate-ping duration-200 hover:bg-[#E72463] hover:text-red-100">
+                    class="mt-4 border-2 min-w-fit w-28 border-red-600 rounded-lg px-2 py-1 text-sm text-[#E72463] cursor-pointer active:animate-ping duration-200 hover:bg-[#E72463] hover:text-red-100">
                     Read More<i class='bx bxs-right-arrow-alt w-5'></i>
                   </button>
                 </div>

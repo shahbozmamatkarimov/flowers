@@ -1,7 +1,7 @@
 <template>
   <main @mousemove="toggleFunc" class="pb-20 lg:mt-12 sm:mt-10 mt-9 w-full overflow-y-auto max-h-screen"
     @scroll="scrolling">
-    <nav class="sticky top-0 py-3 z-10 bg-white shadow-lg">
+    <nav class="sticky top-1 py-3 z-10 bg-white shadow-lg">
       <form class="sm:mx-10 mx-2">
         <div class="flex">
           <button @click="toggle.selectCategory = !toggle.selectCategory"
