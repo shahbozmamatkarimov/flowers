@@ -254,7 +254,7 @@ setInterval(() => {
   display: inline-block;
   overflow: hidden !important;
   text-overflow: ellipsis;
-  line-height: 1.4rem;
+  line-height: 1.3rem;
   overflow: hidden;
   display: -webkit-box;
   -webkit-line-clamp: 3;
