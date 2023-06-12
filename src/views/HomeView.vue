@@ -13,29 +13,34 @@
         <img class="min-h-screen min-w-fit" v-show="slider.slide == 1" src="../assets/slider/1.jpg" alt="img">
         <img class="min-h-screen min-w-fit" v-show="slider.slide == 2" src="../assets/slider/2.jpg" alt="img">
       </div>
-      <div class="flex md:flex-row flex-col">
+      <div class="flex md:flex-row flex-col max-w-[1700px] mx-auto">
         <div
-          class="image overflow-hidden scale md:mx-5 mx-auto flex bg-[#0000004a] justify-center items-center m-5 md:w-1/3 sm:w-1/2 w-[80%] md:my-10 lg:h-96 md:h-72 h-96 cursor-pointer">
-          <img class="h-full absolute  duration-1000 -z-10" src="../assets/slider/1.jpg" alt="img">
+          class="image overflow-hidden scale md:mx-5 mx-auto flex bg-[#0000004a] justify-center items-center m-5 md:w-1/3 sm:w-1/2 w-[80%] md:my-10 lg:h-96 md:h-64 h-80 cursor-pointer">
+          <img class="h-full absolute min-w-fit duration-1000 -z-10"
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFrM7req3UFsSeJGd_IukvXbLlBPLHhTheJMnu3PpJACgP-eJeuA9XZiGZYIeuJNUVhnk&usqp=CAU"
+            alt="img">
           <div class="text-center">
             <h1 class="font-serif text-4xl font-bold text-white">Gullar</h1>
-            <p class="text-2xl">10% chegirma</p>
+            <p class="text-2xl font-bold">10% chegirma</p>
           </div>
         </div>
         <div
-          class="image overflow-hidden scale md:mx-5 mx-auto flex bg-[#0000004a] justify-center items-center m-5 md:w-1/3 sm:w-1/2 w-[80%] md:my-10 lg:h-96 md:h-72 h-96 cursor-pointer">
-          <img class="h-full absolute duration-1000 -z-10" src="../assets/slider/2.jpg" alt="img">
+          class="image overflow-hidden scale md:mx-5 mx-auto flex bg-[#0000004a] justify-center items-center m-5 md:w-1/3 sm:w-1/2 w-[80%] md:my-10 lg:h-96 md:h-64 h-80 cursor-pointer">
+          <img class="h-full min-w-fit absolute duration-1000 -z-10"
+            src="https://cdn.pixabay.com/photo/2013/07/21/13/00/rose-165819_640.jpg" alt="img">
           <div class="text-center">
             <h1 class="font-serif text-4xl font-bold text-white">Gullar</h1>
-            <p class="text-2xl">40% chegirma</p>
+            <p class="text-2xl font-bold">40% chegirma</p>
           </div>
         </div>
         <div
-          class="image overflow-hidden scale md:mx-5 mx-auto flex bg-[#0000004a] justify-center items-center m-5 md:w-1/3 sm:w-1/2 w-[80%] md:my-10 lg:h-96 md:h-72 h-96 cursor-pointer">
-          <img class="h-full absolute duration-1000 -z-10" src="../assets/slider/3.jpg" alt="img">
+          class="image overflow-hidden scale md:mx-5 mx-auto flex bg-[#0000004a] justify-center items-center m-5 md:w-1/3 sm:w-1/2 w-[80%] md:my-10 lg:h-96 md:h-64 h-80 cursor-pointer">
+          <img class="h-full min-w-fit absolute duration-1000 -z-10"
+            src="https://images.pexels.com/photos/56866/garden-rose-red-pink-56866.jpeg?cs=srgb&dl=pexels-pixabay-56866.jpg&fm=jpg"
+            alt="img">
           <div class="text-center">
             <h1 class="font-serif text-4xl font-bold text-white">Gullar</h1>
-            <p class="text-2xl">20% chegirma</p>
+            <p class="text-2xl font-bold">20% chegirma</p>
           </div>
         </div>
       </div>
@@ -47,7 +52,7 @@
           <h1 class="welcome text-3xl">Ajoyib sovg'alar</h1>
           <p class="sm:text-4xl text-2xl">TANLANGAN MAHSULOTLAR</p>
         </div>
-        <div class="lg:w-[1024px] md:w-[992] sm:w-[528px] w-[353px] mx-auto overflow-hidden overflow-x-auto">
+        <div class="relative lg:w-[1024px] md:w-[992] sm:w-[528px] w-[353px] mx-auto overflow-hidden overflow-x-auto" @scroll="slider.handTop = true">
           <div class="flex m-2" v-for="i in 2" :key="i">
             <div
               class="media380 shadow-lg hover:shadow-gray-400 lg:w-1/4 md:w-1/3 pb-2 bg-white rounded text-center font-bold mx-1 leading-9"
@@ -61,6 +66,10 @@
                 Sotib olish
               </button>
             </div>
+          </div>
+          <div>
+            <img :class="{ 'hidden': slider.handTop }" class="hand lg:hidden w-10 absolute right-0 bottom-72 z-50"
+              src="../assets/flower/hand.png" alt="img">
           </div>
         </div>
       </div>
@@ -77,7 +86,7 @@
         <h1 class="welcome text-3xl">Yangi mahsulotlar</h1>
         <h1 class="text-4xl">Eng so'ngi mahsulotlar</h1>
       </div>
-      <div class="lg:w-[1024px] md:w-[992] sm:w-[528px] w-[353px] mx-auto overflow-hidden overflow-x-auto">
+      <div class="lg:w-[1000px] relative md:w-[992] sm:w-[528px] w-[353px] mx-auto overflow-hidden overflow-x-auto" @scroll="slider.hand = true">
         <div class="flex">
           <div class="news lg:w-1/3 sm:w-1/2 sm:mx-0 mx-3 rounded font-bold lg:mx-5 leading-9" v-for="i in 3" :key="i">
             <div class="mx-2 bg-white rounded">
@@ -111,6 +120,10 @@
               </div>
             </div>
           </div>
+        </div>
+        <div>
+          <img :class="{ 'hidden': slider.hand }" class="hand w-10 lg:hidden absolute right-0 bottom-52 z-50"
+            src="../assets/flower/hand.png" alt="img">
         </div>
       </div>
       <div class="text-center">
@@ -166,67 +179,18 @@
         </button>
       </div>
     </section>
-    <footer>
-      <div class="bg-[#000000e3]">
-        <div class="flex justify-between flex-wrap mx-auto w-[80%] mt-20 text-white py-10">
-          <div class="lg:w-1/4 sm:w-1/2 w-full p-4">
-            <h1 class="-ml-5 mb-3"><img class="h-10" src="../assets/florago.svg" alt=""></h1>
-            <p>
-              Siz o'zingiz uchun har qanday gulni sotib oling,
-              yoki har qanday gulingizni soting.
-            </p>
-            <p class="flex gap-3 py-5">
-              <i class='p-2 border hover:bg-[#E72463] hover:border-[#E72463] rounded-full bx bxl-telegram'></i>
-              <i class='p-2 border hover:bg-[#E72463] hover:border-[#E72463] rounded-full bx bxl-facebook'></i>
-              <i class='p-2 border hover:bg-[#E72463] hover:border-[#E72463] rounded-full bx bxl-instagram'></i>
-              <i class='p-2 border hover:bg-[#E72463] hover:border-[#E72463] rounded-full bx bxl-twitter'></i>
-              <i class='p-2 border hover:bg-[#E72463] hover:border-[#E72463] rounded-full bx bxl-linkedin'></i>
-            </p>
-          </div>
-          <div class="lg:w-1/4 sm:w-1/2 p-4">
-            <h1 class="text-2xl pb-5">Biz haqimizda</h1>
-            <ul>
-              <li class="duration-300 hover:text-[#E72463] cursor-pointer hover:pl-1">
-                Bizning kompaniyamiz
-              </li>
-              <li class="duration-300 hover:text-[#E72463] cursor-pointer hover:pl-1">
-                Biz bilan bog'lanish
-              </li>
-              <li class="duration-300 hover:text-[#E72463] cursor-pointer hover:pl-1">
-                Bizning xizmatlar
-              </li>
-            </ul>
-          </div>
-          <div class="lg:w-1/4 sm:w-1/2 sm:px-4 px-0 pl-4 p-4">
-            <h1 class="text-2xl pb-5">Havolalar</h1>
-            <ul>
-              <li class="duration-300 hover:text-[#E72463] cursor-pointer hover:pl-1">Profile</li>
-              <li class="duration-300 hover:text-[#E72463] cursor-pointer hover:pl-1">About us</li>
-              <li class="duration-300 hover:text-[#E72463] cursor-pointer hover:pl-1">Contact</li>
-              <li class="duration-300 hover:text-[#E72463] cursor-pointer hover:pl-1">Sign Up</li>
-            </ul>
-          </div>
-          <div class="lg:w-1/4 sm:w-1/2 w-full p-4">
-            <h1 class="text-2xl pb-5">Ma'lumotlar</h1>
-            <p>Tashkent, Yunusobod, 142-uy</p>
-            <p>Telefon: +998 99 142 23 03</p>
-            <p>Elektron pochta: example@gmail.com</p>
-          </div>
-        </div>
-      </div>
-      <div class="flex justify-center items-center bg-black">
-        <img class="h-4 text-red-500" src="../assets/florago.svg" alt="img">
-        <p class="py-5 text-[#E72463]">2023/07/01</p>
-      </div>
-    </footer>
+    <Footer />
   </main>
 </template>
 
 <script setup>
 import { reactive } from "vue";
+import { Footer } from "../components"
 
 const slider = reactive({
   slide: 1,
+  handTop: false,
+  hand: false,
 })
 
 setInterval(() => {
@@ -261,6 +225,20 @@ setInterval(() => {
   -webkit-box-orient: vertical;
 }
 
+.hand {
+  animation: handanimation 1s linear infinite;
+}
+
+@keyframes handanimation {
+  0% {
+    right: 0;
+  }
+
+  100% {
+    right: 200px;
+  }
+}
+
 .news:hover {
   h1 {
     color: #E72463;
@@ -271,5 +249,4 @@ setInterval(() => {
   .image {
     height: 300px;
   }
-}
-</style>
+}</style>

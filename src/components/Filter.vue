@@ -3,7 +3,7 @@
         class="w-60 shadow-lg shadow-gray-400 lg:mt-12 md:mt-9 mt-8 pb-20 bg-white p-5 overflow-hidden overflow-y-auto max-h-[95vh]">
         <h1 class="text-2xl font-bold"><i class='bx bx-filter-alt'></i>Filter</h1>
         <div class="mt-3">
-            <h1>Price:</h1>
+            <h1 class="font-bold">Price:</h1>
 
             <label for="default-range" class="flex justify-between mb-2 text-sm font-medium">
                 <p>{{ price.end * price.select }} UZS</p>
@@ -19,7 +19,7 @@
         </div>
         <hr class="border my-2">
         <div class="mt-3">
-            <h1 class="flex justify-between">Category<i class='bx bx-chevron-down'></i><i
+            <h1  class="flex justify-between font-bold">Category<i class='bx bx-chevron-down'></i><i
                     class='bx bx-chevron-up hidden'></i>
             </h1>
             <ul class="pl-5 text-gray-500">
@@ -48,7 +48,7 @@
         </div>
         <hr class="border my-2">
         <div class="mt-3">
-            <h1 class="flex justify-between">Colors<i class='bx bx-chevron-down'></i><i class='bx bx-chevron-up hidden'></i>
+            <h1  class="flex justify-between font-bold">Colors<i class='bx bx-chevron-down'></i><i class='bx bx-chevron-up hidden'></i>
             </h1>
             <ul class="pl-5 text-gray-500">
                 <li>

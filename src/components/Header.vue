@@ -6,7 +6,7 @@
           <router-link class="logo flex justify-center items-center" to="/"><img class="sm:h-10 h-9"
               src="../assets/florago.svg" alt="logo"></router-link>
         </div>
-        <div class="hidden w-full lg:flex md:items-center p-1 md:w-auto" id="menu">
+        <div class="hidden w-full md:flex md:items-center p-1 md:w-auto" id="menu">
           <ul class="pt-4 text-lg text-black md:flex md:justify-between md:pt-0">
             <li>
               <router-link to="/"
@@ -23,7 +23,7 @@
             </li>
             <li>
               <router-link to="/contact"
-                class="md:py-2 md:px-5 hover:bg-[#c619925b] rounded-xl active:animate-ping py-2 block hover:text-white">Contact</router-link>
+                class="md:py-2 md:px-5 hover:bg-[#c619925b] rounded-xl active:animate-ping py-2 block hover:text-white">Contact us</router-link>
             </li>
           </ul>
         </div>
@@ -104,15 +104,15 @@
             </div>
           </div>
           <!-- cart end -->
-          <ul class="lg:hidden pr-5">
+          <ul class="md:hidden pr-5">
             <li>
               <i @click="store.toggleHead = !store.toggleHead" class="bx bx-menu sm:text-4xl text-3xl"></i>
             </li>
           </ul>
         </div>
         <!-- Main modal -->
-        <div id="defaultModal" tabindex="-1" aria-hidden="true" :class="{ hidden: !store.toggleHead }"
-          class="nav fixed bg-[#e80b85] top-12 shadow-lg rounded-xl border right-0 z-50 p-4 overflow-x-hidden overflow-y-auto md:inset-0">
+        <div :class="{ hidden: !store.toggleHead }"
+          class="nav md:hidden fixed bg-[#e80b85] top-12 shadow-lg rounded-xl border right-0 z-50 p-4 overflow-x-hidden overflow-y-auto md:inset-0">
           <ul class="text-base md:flex md:justify-between" @click="store.toggleHead = !store.toggleHead">
             <li>
               <router-link to="/"
@@ -129,7 +129,7 @@
             </li>
             <li>
               <router-link to="/contact"
-                class="md:py-2 md:px-5 font-extrabold hover:bg-[#c619925b] rounded-xl px-4 active:animate-ping py-2 block hover:text-white">Contact</router-link>
+                class="md:py-2 md:px-5 font-extrabold hover:bg-[#c619925b] rounded-xl px-4 active:animate-ping py-2 block hover:text-white">Contact us</router-link>
             </li>
           </ul>
         </div>

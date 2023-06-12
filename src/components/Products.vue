@@ -7,15 +7,15 @@
           <button @click="toggle.selectCategory = !toggle.selectCategory"
             class="flex-shrink-0 z-10 sm:inline-flex hidden items-center text-sm font-medium text-center border border-gray-300 rounded-l-lg hover:bg-gray-200 outline-none"
             type="button">
-            <select class="outline-none py-2 px-4 bg-transparent">
+            <select class="outline-none rounded-l-lg text-white bg-[#E72463] py-2 x-4">
               <option value="1">title</option>
               <option value="2">price</option>
               <option value="3">description</option>
             </select>
           </button>
-          <button @click="toggle.toggleFilter = !toggle.toggleFilter"
+          <p @click="toggle.toggleFilter = !toggle.toggleFilter"
             class="flex-shrink-0 z-10 inline-flex sm:hidden items-center py-1 px-4 text-sm font-medium text-center border border-gray-300 rounded-l-lg hover:bg-gray-200 outline-none"><i
-              class='bx bx-filter-alt'></i>Filter</button>
+              class='bx bx-filter-alt'></i>Filter</p>
           <input type="search" id="search-dropdown"
             class="block sm:p-2 p-1 w-full z-20 text-sm rounded-r-lg border-l-gray-50 border-l-2 border border-gray-300"
             placeholder="Search..." required>
