@@ -1,6 +1,6 @@
 <template>
     <aside
-        class="w-60 shadow-lg shadow-gray-400 lg:mt-12 md:mt-9 mt-8 pb-20 bg-white p-5 overflow-hidden overflow-y-auto max-h-[95vh]">
+        class="w-60 shadow-lg shadow-gray-400 lg:mt-12 md:mt-11 mt-10 pb-20 bg-white p-5 overflow-hidden overflow-y-auto max-h-[95vh]">
         <h1 class="text-2xl font-bold"><i class='bx bx-filter-alt'></i>Filter</h1>
         <div class="mt-3">
             <h1 class="font-bold">Price:</h1>

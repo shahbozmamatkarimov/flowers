@@ -1,6 +1,6 @@
 <template>
   <header class="fixed w-full z-50 font-bold">
-    <nav class="nav bg-[#e80b85] md:py-0.5 py-1 text-lg flex justify-center px-3">
+    <nav class="nav bg-[#e80b85] md:py-0 py-1 text-lg flex justify-center px-3">
       <div class="flex flex-wrap items-center justify-between w-full max-w-[1700px]">
         <div>
           <router-link class="logo flex justify-center items-center" to="/"><img class="sm:h-10 h-9"
