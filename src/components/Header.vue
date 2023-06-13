@@ -10,20 +10,20 @@
           <ul class="pt-4 text-lg text-black md:flex md:justify-between md:pt-0">
             <li>
               <router-link to="/"
-                class="md:py-2 md:px-5 hover:bg-[#c619925b5b] rounded-xl active:animate-ping py-2 block hover:text-white">Home</router-link>
+                class="md:py-1 my-1 md:px-5 hover:bg-[#c619925b5b] rounded-md active:animate-ping block text-white">Home</router-link>
             </li>
             <li>
               <router-link to="/products"
-                class="md:py-2 md:px-5 hover:bg-[#c619925b] rounded-xl active:animate-ping py-2 block hover:text-white">Products</router-link>
+                class="md:py-1 my-1 md:px-5 hover:bg-[#c619925b] rounded-md active:animate-ping block text-white">Products</router-link>
             </li>
             <li>
               <router-link to="/about"
-                class="md:py-2 md:px-5 hover:bg-[#c619925b] rounded-xl active:animate-ping py-2 block hover:text-white">About
+                class="md:py-1 my-1 md:px-5 hover:bg-[#c619925b] rounded-md active:animate-ping block text-white">About
                 us</router-link>
             </li>
             <li>
               <router-link to="/contact"
-                class="md:py-2 md:px-5 hover:bg-[#c619925b] rounded-xl active:animate-ping py-2 block hover:text-white">Contact
+                class="md:py-1 my-1 md:px-5 hover:bg-[#c619925b] rounded-md active:animate-ping block text-white">Contact
                 us</router-link>
             </li>
           </ul>
@@ -150,6 +150,7 @@ const store = useHeader()
 .router-link-active {
   color: white;
   font-weight: bold;
+  border-bottom: 1.6px solid white;
 }
 
 .logo {
