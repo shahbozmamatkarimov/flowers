@@ -12,8 +12,8 @@
           Xarid qilish
         </button>
       </div>
-      <div class="sm:w-1/2 w-[270px] sm:h-96 h-[270px] mx-auto">
-        <img class="sm:w-full ml-5 w-[270px] sm:h-96 h-[270px] mx-auto"
+      <div class="sm:w-96 w-[270px] sm:h-96 h-[270px] mx-auto">
+        <img class="sm:w-96 md:ml-5 w-[270px] sm:h-96 h-[270px] mx-auto"
           src="https://st.depositphotos.com/1674023/4340/i/950/depositphotos_43408743-stock-photo-collage-of-beautiful-spring-flowers.jpg"
           alt="img">
       </div>
