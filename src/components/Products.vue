@@ -54,7 +54,7 @@
       <div v-show="store.state.load == true">
         <div class="wrapper lg:mx-10 mt-5">
           <div class="cards mx-auto" v-for="el in 12" :key="el">
-            <div class="shadow-lg mb-4 hover:shadow-gray-300 rounded text-center font-bold mx-1">
+            <div class="shadow-lg mb-4 hover:shadow-gray-300 min-w-[175px] rounded text-center font-bold mx-1">
               <img src="../assets/placeholder-image.png" class="activity card-img rounded-t-md mx-auto max-h-52"
                 alt="img">
               <hr class="border-gray-100">
@@ -80,17 +80,12 @@
 </template>
 
 <script setup>
-import { onMounted, reactive } from 'vue'
+import { onMounted } from 'vue'
 import { useContactStore } from '../stores/products'
 import { useHeader } from '../stores/HeaderNav'
 const toggle = useHeader()
 
 const store = useContactStore()
-
-const price = reactive({
-  end: 100,
-  select: 10,
-})
 
 function toggleFunc(e) {
   if (e.target.value == '') {
