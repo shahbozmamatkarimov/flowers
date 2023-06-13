@@ -1,14 +1,13 @@
 <template>
     <aside
-        class="w-60 shadow-lg shadow-gray-400 lg:mt-12 md:mt-11 mt-10 pb-20 bg-white p-5 overflow-hidden overflow-y-auto max-h-[95vh]">
+        class="min-w-60 shadow-lg shadow-gray-400 lg:mt-12 md:mt-11 mt-10 pb-20 bg-white p-5 overflow-hidden overflow-y-auto max-h-[95vh]">
         <h1 class="text-2xl font-bold"><i class='bx bx-filter-alt'></i>Filter</h1>
         <div class="mt-3">
             <h1 class="font-bold">Price:</h1>
-
             <label for="default-range" class="flex justify-between mb-2 text-sm font-medium">
                 <p>{{ price.end * price.select }} UZS</p>
                 <select v-model="price.select" class="border-2 rounded">
-                    <option value="1">1</option>
+                    <option value="1">1</option>    
                     <option value="10">10</option>
                     <option value="100">100</option>
                     <option value="500">500</option>
@@ -17,9 +16,25 @@
             <input id="default-range" v-model="price.end" type="range"
                 class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer">
         </div>
+        <div>
+            <div class="flex justify-between gap-1">
+                <button
+                    class="mt-2 border-2 border-blue-600 rounded-lg px-2 py-1 text-sm text-[blue] cursor-pointer active:animate-ping duration-200 bg-white hover:bg-[blue] hover:text-white">
+                    Yangilari
+                </button>
+                <button
+                    class="mt-2 float-right border-2 border-blue-600 rounded-lg px-2 py-1 text-sm text-[blue] cursor-pointer active:animate-ping duration-200 bg-white hover:bg-[blue] hover:text-white">
+                    Tanlanganlari
+                </button>
+            </div>
+            <button
+                class="mt-2 border-2 border-blue-600 rounded-lg px-2 py-1 text-sm text-[blue] w-full cursor-pointer active:animate-ping duration-200 bg-white hover:bg-[blue] hover:text-white">
+                Barchasi
+            </button>
+        </div>
         <hr class="border my-2">
         <div class="mt-3">
-            <h1  class="flex justify-between font-bold">Category<i class='bx bx-chevron-down'></i><i
+            <h1 class="flex justify-between font-bold">Category<i class='bx bx-chevron-down'></i><i
                     class='bx bx-chevron-up hidden'></i>
             </h1>
             <ul class="pl-5 text-gray-500">
@@ -48,7 +63,8 @@
         </div>
         <hr class="border my-2">
         <div class="mt-3">
-            <h1  class="flex justify-between font-bold">Colors<i class='bx bx-chevron-down'></i><i class='bx bx-chevron-up hidden'></i>
+            <h1 class="flex justify-between font-bold">Colors<i class='bx bx-chevron-down'></i><i
+                    class='bx bx-chevron-up hidden'></i>
             </h1>
             <ul class="pl-5 text-gray-500">
                 <li>
@@ -84,7 +100,7 @@
         </div>
         <div>
             <button
-                class="mt-2 border-2 border-red-600 rounded-lg px-2 py-1 text-sm text-[#E72463] w-[80%] cursor-pointer active:animate-ping duration-200 bg-white hover:bg-[#E72463] hover:text-white">
+                class="mt-2 border-2 border-blue-600 rounded-lg px-2 py-1 text-sm text-[blue] w-[80%] cursor-pointer active:animate-ping duration-200 bg-white hover:bg-[blue] hover:text-white">
                 Qayta o'rnatish
             </button>
         </div>

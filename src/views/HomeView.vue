@@ -1,5 +1,5 @@
 <template>
-  <main class="overflow-y-auto overflow-hidden max-h-screen">
+  <main>
     <section>
       <div class="flex flex-col justify-center items-center min-h-screen">
         <h1 class="welcome lg:text-9xl text-6xl text-[#E72463]">Xush kelibsiz</h1>
@@ -68,7 +68,7 @@
             </div>
           </div>
           <div>
-            <img :class="{ 'hidden': slider.handTop }" class="hand lg:hidden w-10 absolute right-0 bottom-72 z-50"
+            <img :class="{ 'hidden': slider.handTop }" class="hand lg:hidden w-10 absolute right-0 bottom-72 z-10"
               src="../assets/flower/hand.png" alt="img">
           </div>
         </div>
@@ -122,7 +122,7 @@
           </div>
         </div>
         <div>
-          <img :class="{ 'hidden': slider.hand }" class="hand w-10 lg:hidden absolute right-0 bottom-52 z-50"
+          <img :class="{ 'hidden': slider.hand }" class="hand w-10 lg:hidden absolute right-0 bottom-52 z-10"
             src="../assets/flower/hand.png" alt="img">
         </div>
       </div>
@@ -138,29 +138,29 @@
       <h1 class="welcome text-2xl">Bizning xizmatlarimiz</h1>
       <div class="relative">
         <div class="flex items-center h-40 animate-spin justify-center">
-          <p class="w-5 h-5 bg-yellow-500 rounded-full"></p>
+          <p class="w-5 h-5 bg-[#000] rounded-full"></p>
           <p class="w-28"></p>
-          <p class="w-5 h-5 bg-yellow-500 rounded-full"></p>
+          <p class="w-5 h-5 bg-[#000] rounded-full"></p>
         </div>
         <div class="flex absolute rotate-90 top-0 items-center h-40 w-full justify-center">
           <div class="flex mx-auto items-center h-40  animate-spin justify-center">
-            <p class="w-5 h-5 bg-yellow-500 left- rounded-full"></p>
+            <p class="w-5 h-5 bg-[#000] left- rounded-full"></p>
             <p class="w-28"></p>
-            <p class="w-5 h-5 bg-yellow-500 rounded-full"></p>
+            <p class="w-5 h-5 bg-[#000] rounded-full"></p>
           </div>
         </div>
         <div class="flex absolute rotate-45 top-0 items-center h-40 w-full justify-center">
           <div class="flex mx-auto items-center h-40  animate-spin justify-center">
-            <p class="w-5 h-5 bg-yellow-500 left- rounded-full"></p>
+            <p class="w-5 h-5 bg-[#000] left- rounded-full"></p>
             <p class="w-28"></p>
-            <p class="w-5 h-5 bg-yellow-500 rounded-full"></p>
+            <p class="w-5 h-5 bg-[#000] rounded-full"></p>
           </div>
         </div>
         <div class="flex absolute rotate-[135deg] top-0 items-center h-40 w-full justify-center">
           <div class="flex mx-auto items-center h-40  animate-spin justify-center">
-            <p class="w-5 h-5 bg-yellow-500 left- rounded-full"></p>
+            <p class="w-5 h-5 bg-[#000] left- rounded-full"></p>
             <p class="w-28"></p>
-            <p class="w-5 h-5 bg-yellow-500 rounded-full"></p>
+            <p class="w-5 h-5 bg-[#000] rounded-full"></p>
           </div>
         </div>
         <div class=" top-0 absolute w-full">
@@ -179,13 +179,11 @@
         </button>
       </div>
     </section>
-    <Footer />
   </main>
 </template>
 
 <script setup>
 import { reactive } from "vue";
-import { Footer } from "../components"
 
 const slider = reactive({
   slide: 1,

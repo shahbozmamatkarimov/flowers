@@ -5,9 +5,9 @@
       <form class="sm:mx-10 mx-2">
         <div class="flex">
           <button @click="toggle.selectCategory = !toggle.selectCategory"
-            class="flex-shrink-0 z-10 sm:inline-flex hidden items-center text-sm font-medium text-center border border-gray-300 rounded-l-lg hover:bg-gray-200 outline-none"
+            class="flex-shrink-0 bg-[#E72463] py-2 x-4 z-10 sm:inline-flex hidden items-center text-sm font-medium text-center border border-gray-300 rounded-l-lg outline-none"
             type="button">
-            <select class="outline-none rounded-l-lg text-white bg-[#E72463] py-2 x-4">
+            <select class="outline-none bg-transparent rounded-l-lg mx-2 cursor-pointer">
               <option value="1">title</option>
               <option value="2">price</option>
               <option value="3">description</option>
@@ -17,7 +17,7 @@
             class="flex-shrink-0 z-10 inline-flex sm:hidden items-center py-1 px-4 text-sm font-medium text-center border border-gray-300 rounded-l-lg hover:bg-gray-200 outline-none"><i
               class='bx bx-filter-alt'></i>Filter</p>
           <input type="search" id="search-dropdown"
-            class="block sm:p-2 p-1 w-full z-20 text-sm rounded-r-lg border-l-gray-50 border-l-2 border border-gray-300"
+            class="block sm:py-2 mr-6 py-1 pl-2 pr-4 w-full z-20 text-sm rounded-r-lg border-l-gray-50 border-l-2 border border-gray-300"
             placeholder="Search..." required>
           <button type="submit"
             class="absolute sm:top-[1.5px] top-[1px] z-20 right-0 sm:p-2 py-1 px-2 text-sm font-medium text-white bg-[#E72463] rounded-r-lg">
