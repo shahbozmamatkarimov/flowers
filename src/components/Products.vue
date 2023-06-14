@@ -1,5 +1,5 @@
 <template>
-  <main @mousemove="toggleFunc" class="pb-20 md:mt-12 mt-11 w-full overflow-y-auto max-h-screen"
+  <main @mousedown="toggleFunc" class="pb-20 md:mt-12 mt-11 w-full overflow-y-auto max-h-screen"
     @scroll="scrolling">
     <nav class="sticky top-1 py-3 z-10 bg-white shadow-lg">
       <form class="sm:mx-10 mx-2">

@@ -33,19 +33,21 @@
           placeholder="Emailingizni kiriting">
         <textarea class="w-[80%] border-2 bg-white outline-none p-1 rounded required" rows="5"
           placeholder="Xabaringizni kiriting"></textarea>
-        <input class="border-2 border-white cursor-pointer text-white focus:border-[#E72463] px-5 py-1 font-bold rounded-lg"
+        <input
+          class="border-2 border-white cursor-pointer text-white focus:border-[#E72463] px-5 py-1 font-bold rounded-lg"
           type="submit">
       </form>
     </section>
   </main>
 </template>
+
+<script setup></script>
   
 <style lang="scss">
-
 @media (max-width:1024px) {
-  .contact{
+  .contact {
     flex-wrap: wrap;
-  }  
+  }
 }
 </style>
   

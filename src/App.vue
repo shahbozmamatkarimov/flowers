@@ -5,7 +5,7 @@
     </header>
     <!-- <p class="text-5xl pt-20" @click="toggleDark()">Dark theme: {{ isDark }}</p> -->
     <!-- <div class="h-16"></div> -->
-    <div @mousedown="toggleFunc" :class="{'overflow-y-auto max-h-screen': routerUrl != '/products'}">
+    <div id="main" @mousedown="toggleFunc" :class="{'overflow-y-auto max-h-screen': routerUrl != '/products'}">
       <router-view></router-view>
       <Footer v-show="routerUrl != '/products'" />
     </div>
@@ -30,8 +30,10 @@ const routerUrl = ref('/');
 watch(
   () => route.fullPath,
   async () => {
+    let main = document.querySelector('#main');
+    main.scrollTo(0, 0);
     routerUrl.value = route.fullPath
-  } 
+  }
 );
 
 

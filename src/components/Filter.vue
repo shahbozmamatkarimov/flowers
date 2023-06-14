@@ -7,7 +7,7 @@
             <label for="default-range" class="flex justify-between mb-2 text-sm font-medium">
                 <p>{{ price.end * price.select }} UZS</p>
                 <select v-model="price.select" class="border-2 rounded">
-                    <option value="1">1</option>    
+                    <option value="1">1</option>
                     <option value="10">10</option>
                     <option value="100">100</option>
                     <option value="500">500</option>
@@ -18,19 +18,28 @@
         </div>
         <div>
             <div class="flex justify-between gap-1">
-                <button
-                    class="mt-2 border-2 border-blue-600 rounded-lg px-2 py-1 text-sm text-[blue] cursor-pointer active:animate-ping duration-200 bg-white hover:bg-[blue] hover:text-white">
+                <button @click="Filter('news')"
+                    :class="{ 'bg-[blue] text-white': filterBtn.news, 'bg-white': !filterBtn.news }"
+                    class="mt-2 border-2 border-blue-600 rounded-lg px-2 py-1 text-sm text-[blue] cursor-pointer active:animate-ping duration-200">
                     Yangilari
                 </button>
-                <button
-                    class="mt-2 float-right border-2 border-blue-600 rounded-lg px-2 py-1 text-sm text-[blue] cursor-pointer active:animate-ping duration-200 bg-white hover:bg-[blue] hover:text-white">
+                <button @click="Filter('selected')"
+                    :class="{ 'bg-[blue] text-white': filterBtn.selected, 'bg-white': !filterBtn.selected }"
+                    class="mt-2 float-right border-2 border-blue-600 rounded-lg px-2 py-1 text-sm text-[blue] cursor-pointer active:animate-ping duration-200">
                     Tanlanganlari
                 </button>
             </div>
-            <button
-                class="mt-2 border-2 border-blue-600 rounded-lg px-2 py-1 text-sm text-[blue] w-full cursor-pointer active:animate-ping duration-200 bg-white hover:bg-[blue] hover:text-white">
+            <button @click="Filter('all')" :class="{ 'bg-[blue] text-white': filterBtn.all, 'bg-white': !filterBtn.all }"
+                class="mt-2 border-2 border-blue-600 rounded-lg px-2 py-1 text-sm text-[blue] w-full cursor-pointer active:animate-ping duration-200">
                 Barchasi
             </button>
+            <div class="mt-2 border-2 border-blue-600 rounded-lg px-2 py-1 text-sm text-[blue] w-full duration-200">
+                <select class="cursor-pointer outline-none font-medium">
+                    <option selected>narxi bo'yicha</option>
+                    <option value="1">likelari bo'yicha</option>
+                    <option value="2">ko'rilganlari bo'yicha</option>
+                </select>
+            </div>
         </div>
         <hr class="border my-2">
         <div class="mt-3">
@@ -114,4 +123,17 @@ const price = reactive({
     end: 100,
     select: 10,
 })
+
+const filterBtn = reactive({
+    news: false,
+    selected: false,
+    all: false,
+})
+
+const Filter = (val) => {
+    for (let i in filterBtn) {
+        filterBtn[i] = false;
+    }
+    filterBtn[val] = true;
+}
 </script>

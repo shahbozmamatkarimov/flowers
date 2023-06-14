@@ -10,20 +10,20 @@
           <ul class="pt-4 text-lg text-black md:flex md:justify-between md:pt-0">
             <li>
               <router-link to="/"
-                class="md:py-1 my-1 md:px-5 hover:bg-[#c619925b5b] rounded-md active:animate-ping block text-white">Home</router-link>
+                class="md:py-1 my-1 md:px-5 hover:bg-[#c619925b5b] rounded-md active:animate-ping block text-black font-medium">Home</router-link>
             </li>
             <li>
               <router-link to="/products"
-                class="md:py-1 my-1 md:px-5 hover:bg-[#c619925b] rounded-md active:animate-ping block text-white">Products</router-link>
+                class="md:py-1 my-1 md:px-5 hover:bg-[#c619925b] rounded-md active:animate-ping block text-black font-medium">Products</router-link>
             </li>
             <li>
               <router-link to="/about"
-                class="md:py-1 my-1 md:px-5 hover:bg-[#c619925b] rounded-md active:animate-ping block text-white">About
+                class="md:py-1 my-1 md:px-5 hover:bg-[#c619925b] rounded-md active:animate-ping block text-black font-medium">About
                 us</router-link>
             </li>
             <li>
               <router-link to="/contact"
-                class="md:py-1 my-1 md:px-5 hover:bg-[#c619925b] rounded-md active:animate-ping block text-white">Contact
+                class="md:py-1 my-1 md:px-5 hover:bg-[#c619925b] rounded-md active:animate-ping block text-black font-medium">Contact
                 us</router-link>
             </li>
           </ul>
@@ -33,7 +33,8 @@
           <!-- cart -->
           <div class="flex justify-between items-center px-5">
             <div>
-              <p @click="store.toggleCart = !store.toggleCart" class="cursor-pointer"><i class='text-white lg:mr-5 text-2xl bx bxs-cart-alt relative'></i><span
+              <p @click="store.toggleCart = !store.toggleCart" class="cursor-pointer"><i
+                  class='text-white lg:mr-5 text-2xl bx bxs-cart-alt relative'></i><span
                   class="absolute left-4 top-3 text-xs border-2 border-[#e724a0] font-bold text-[#E72463] px-1 bg-white rounded-full inline-block">5</span>
               </p>
 
@@ -118,20 +119,20 @@
           <ul class="text-base md:flex md:justify-between" @click="store.toggleHead = !store.toggleHead">
             <li>
               <router-link to="/"
-                class="md:py-2 md:px-5 font-extrabold hover:bg-[#c619925b] rounded-xl px-4 active:animate-ping py-2 block hover:text-white">Home</router-link>
+                class="md:py-2 md:px-5 font-extrabold hover:bg-[#c619925b] rounded-xl px-4 active:animate-ping py-2 inline-block hover:text-white">Home</router-link>
             </li>
             <li>
               <router-link to="/products"
-                class="md:py-2 md:px-5 font-extrabold hover:bg-[#c619925b] rounded-xl px-4 active:animate-ping py-2 block hover:text-white">Products</router-link>
+                class="md:py-2 md:px-5 font-extrabold hover:bg-[#c619925b] rounded-xl px-4 active:animate-ping py-2 inline-block hover:text-white">Products</router-link>
             </li>
             <li>
               <router-link to="/about"
-                class="md:py-2 md:px-5 font-extrabold hover:bg-[#c619925b] rounded-xl px-4 active:animate-ping py-2 block hover:text-white">About
+                class="md:py-2 md:px-5 font-extrabold hover:bg-[#c619925b] rounded-xl px-4 active:animate-ping py-2 inline-block hover:text-white">About
                 us</router-link>
             </li>
             <li>
               <router-link to="/contact"
-                class="md:py-2 md:px-5 font-extrabold hover:bg-[#c619925b] rounded-xl px-4 active:animate-ping py-2 block hover:text-white">Contact
+                class="md:py-2 md:px-5 font-extrabold hover:bg-[#c619925b] rounded-xl px-4 active:animate-ping py-2 inline-block hover:text-white">Contact
                 us</router-link>
             </li>
           </ul>
@@ -150,7 +151,6 @@ const store = useHeader()
 .router-link-active {
   color: white;
   font-weight: bold;
-  border-bottom: 1.6px solid white;
 }
 
 .logo {
