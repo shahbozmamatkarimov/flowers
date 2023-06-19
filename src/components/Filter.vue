@@ -33,9 +33,9 @@
                 class="mt-2 border-2 border-blue-600 rounded-lg px-2 py-1 text-sm text-[blue] w-full cursor-pointer active:animate-ping duration-200">
                 Barchasi
             </button>
-            <div class="mt-2 border-2 border-blue-600 rounded-lg px-2 py-1 text-sm text-[blue] w-full duration-200">
+            <div class="flex justify-center mt-2 border-2 border-blue-600 rounded-lg px-2 py-1 text-sm text-[blue] w-full duration-200">
                 <select class="cursor-pointer outline-none font-medium">
-                    <option selected>narxi bo'yicha</option>
+                    <option selected>narx bo'yicha</option>
                     <option value="1">likelari bo'yicha</option>
                     <option value="2">ko'rilganlari bo'yicha</option>
                 </select>

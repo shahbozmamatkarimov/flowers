@@ -1,4 +1,4 @@
-import { ref } from 'vue'
+import { reactive, ref } from 'vue'
 import { defineStore } from 'pinia'
 
 export const useHeader = defineStore('toggleHead', () => {
@@ -6,6 +6,11 @@ export const useHeader = defineStore('toggleHead', () => {
   const toggleFilter = ref(false);
   const toggleCart = ref(false);
   const selectCategory = ref(false);
+  const imageModal = ref(false);
 
-  return { toggleHead, toggleFilter, toggleCart, selectCategory };
+  const data = reactive({
+    image: "",
+  })
+
+  return { data, toggleHead, imageModal, toggleFilter, toggleCart, selectCategory };
 })

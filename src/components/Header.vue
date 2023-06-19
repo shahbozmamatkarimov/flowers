@@ -1,6 +1,6 @@
 <template>
   <header class="fixed w-full z-50 font-bold">
-    <nav class="nav bg-[#e80b85] md:py-0 py-1 text-lg flex justify-center px-3">
+    <nav class="nav bg-[#e80b85] border-b-2 h-14 border-white shadow-md shadow-gray-700 active:shadow-none duration-300 md:py-0 py-1 text-lg flex justify-center px-3">
       <div class="flex flex-wrap items-center justify-between w-full max-w-[1700px]">
         <div>
           <router-link class="logo flex justify-center items-center" to="/"><img class="sm:h-10 h-9"
@@ -10,20 +10,20 @@
           <ul class="pt-4 text-lg text-black md:flex md:justify-between md:pt-0">
             <li>
               <router-link to="/"
-                class="md:py-1 my-1 md:px-5 hover:bg-[#c619925b5b] rounded-md active:animate-ping block text-black font-medium">Home</router-link>
+                class="md:py-1 my-1 md:px-5 hover:bg-[#c619925b5b] active:animate-ping block text-black font-medium">Home</router-link>
             </li>
             <li>
               <router-link to="/products"
-                class="md:py-1 my-1 md:px-5 hover:bg-[#c619925b] rounded-md active:animate-ping block text-black font-medium">Products</router-link>
+                class="md:py-1 my-1 md:px-5 hover:bg-[#c619925b] active:animate-ping block text-black font-medium">Products</router-link>
             </li>
             <li>
               <router-link to="/about"
-                class="md:py-1 my-1 md:px-5 hover:bg-[#c619925b] rounded-md active:animate-ping block text-black font-medium">About
+                class="md:py-1 my-1 md:px-5 hover:bg-[#c619925b] active:animate-ping block text-black font-medium">About
                 us</router-link>
             </li>
             <li>
               <router-link to="/contact"
-                class="md:py-1 my-1 md:px-5 hover:bg-[#c619925b] rounded-md active:animate-ping block text-black font-medium">Contact
+                class="md:py-1 my-1 md:px-5 hover:bg-[#c619925b] active:animate-ping block text-black font-medium">Contact
                 us</router-link>
             </li>
           </ul>
@@ -39,12 +39,12 @@
               </p>
 
               <div v-show="store.toggleCart"
-                class="carts bg-white absolute lg:right-4 -right-3 overflow-x-auto shadow-md sm:rounded-lg">
+                class="carts bg-white px-2 absolute lg:right-4 -right-3 overflow-x-auto shadow-md sm:rounded-lg">
                 <table class="w-full text-sm text-left text-gray-500">
-                  <thead class="text-xs text-gray-700 uppercase bg-gray-50">
+                  <thead class="text-xs text-gray-700 uppercase">
                     <tr>
                       <th scope="col" class="w-80 pr-2 py-2">
-                        <p class="font-extrabold">Subtotal:</p>
+                        <p class="font-extrabold py-2">Subtotal:</p>
                       </th>
                       <th scope="col" class="pr-10 pl-2 py-2">
                         <p class="font-extrabold">95.000</p>
@@ -59,7 +59,7 @@
                       <td class="w-96">
                         <img :src="`https://picsum.photos/500/500?random=${i}}`" alt="img">
                       </td>
-                      <td class="sm:flex items-center truncate h-20 hidden font-semibold text-gray-900">
+                      <td class="sm:flex items-center px-2 truncate h-20 hidden font-semibold text-gray-900">
                         Apple Watch
                       </td>
                       <td class="py-4 cartTitle">
@@ -97,17 +97,17 @@
                         $599
                       </td>
                       <td class="px-2">
-                        <i class='bx bx-trash cursor-pointer text-red-500'></i>
+                        <i class='bx bx-trash cursor-pointer text-red-500 text-lg'></i>
                       </td>
                     </tr>
                   </tbody>
                 </table>
-                <p class="text-lg text-blue-600 float-right font-medium pr-2">View all</p>
+                <p class="text-lg text-blue-600 float-right font-medium pr-2 py-1">view all</p>
               </div>
             </div>
           </div>
           <!-- cart end -->
-          <ul class="md:hidden pr-5">
+          <ul class="md:hidden md:pr-5 pr-2">
             <li>
               <i @click="store.toggleHead = !store.toggleHead" class="bx bx-menu sm:text-4xl text-3xl"></i>
             </li>
@@ -151,6 +151,8 @@ const store = useHeader()
 .router-link-active {
   color: white;
   font-weight: bold;
+  border-bottom: 5px solid white;
+  padding-bottom: 10px;
 }
 
 .logo {
